@@ -1,4 +1,4 @@
-package MPS.scripts.world;
+package MPS.data.scripts.world;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.SectorAPI;
@@ -8,6 +8,7 @@ import com.fs.starfarer.api.campaign.econ.EconomyAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 
 import java.util.ArrayList;
+
 
 public class MPS_WorldGen implements SectorGeneratorPlugin {
 

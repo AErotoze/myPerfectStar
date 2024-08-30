@@ -1,4 +1,4 @@
-package MPS.scripts.world;
+package MPS.data.scripts.world;
 
 
 import com.fs.starfarer.api.Global;
@@ -19,7 +19,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static MPS.scripts.world.MPS_WorldGen.addPlanetCondition;
+import static MPS.data.scripts.world.MPS_WorldGen.addPlanetCondition;
 
 public class MPS_Arakyr {
 
@@ -29,19 +29,19 @@ public class MPS_Arakyr {
         system.setBackgroundTextureFilename("graphics/backgrounds/background1.jpg");
 
         PlanetAPI Astar = system.initStar("Arakyr", StarTypes.ORANGE, 980f, 333f, 0.75f, 0.25f, 2f);
-        system.setLightColor(new Color(0, 167, 98));
+        system.setLightColor(new Color(255, 255, 255));
 
-        PlanetAPI arakyr1 = system.addPlanet("arakyr1", Astar, "ArakyrI", Planets.IRRADIATED, 4f, 100f, 4000f, 88f);
-        PlanetAPI arakyr2 = system.addPlanet("arakyr2", Astar, "ArakyrII", Planets.PLANET_LAVA_MINOR, 8f, 150f, 5500f, 225f);
+        PlanetAPI arakyr1 = system.addPlanet("arakyr1", Astar, "ArakyrI", Planets.IRRADIATED, (float) (Math.random()*360f), 100f, 4000f, 88f);
+        PlanetAPI arakyr2 = system.addPlanet("arakyr2", Astar, "ArakyrII", Planets.PLANET_LAVA_MINOR, (float) (Math.random()*360f), 150f, 5500f, 225f);
 
-        PlanetAPI arakyr3 = system.addPlanet("arakyr3", Astar, "ArakyrIII", Planets.PLANET_TERRAN, 16f, 200f, 7800f, 365f);
-        PlanetAPI arakyr3a = system.addPlanet("arakyr3a", arakyr3, "ArakyrIIIa", Planets.BARREN_BOMBARDED, 1f, 55f, 430f, 183f);
-        PlanetAPI arakyr3b = system.addPlanet("arakyr3b", arakyr3, "ArakyrIIIb", Planets.ROCKY_ICE, 2f, 80f, 640f, 365f);
+        PlanetAPI arakyr3 = system.addPlanet("arakyr3", Astar, "ArakyrIII", Planets.PLANET_TERRAN, 0f, 200f, 7800f, 365f);
+        PlanetAPI arakyr3a = system.addPlanet("arakyr3a", arakyr3, "ArakyrIIIa", Planets.BARREN_BOMBARDED, (float) (Math.random()*360f), 45f, 730f, 183f);
+        PlanetAPI arakyr3b = system.addPlanet("arakyr3b", arakyr3, "ArakyrIIIb", Planets.ROCKY_ICE, 0f, 35f, 940f, 365f);
 
-        PlanetAPI arakyr4 = system.addPlanet("arakyr4", Astar, "ArakyrIV", Planets.BARREN_DESERT, 32f, 220f, 9040f, 693f);
-        PlanetAPI arakyr5 = system.addPlanet("arakyr5", Astar, "ArakyrV", Planets.GAS_GIANT, 64f, 750f, 13490f, 4307f);
-        PlanetAPI arakyr6 = system.addPlanet("arakyr6", Astar, "ArakyrVI", Planets.ICE_GIANT, 128f, 580f, 18900f, 10767f);
-        PlanetAPI arakyr7 = system.addPlanet("arakyr7", Astar, "ArakyrVII", "cryovolcanic", 256f, 150f, 20240f, 60152f);
+        PlanetAPI arakyr4 = system.addPlanet("arakyr4", Astar, "ArakyrIV", Planets.BARREN_DESERT, (float) (Math.random()*360f), 220f, 9040f, 693f);
+        PlanetAPI arakyr5 = system.addPlanet("arakyr5", Astar, "ArakyrV", Planets.GAS_GIANT, (float) (Math.random()*360f), 750f, 13490f, 4307f);
+        PlanetAPI arakyr6 = system.addPlanet("arakyr6", Astar, "ArakyrVI", Planets.ICE_GIANT, (float) (Math.random()*360f), 580f, 18900f, 10767f);
+        PlanetAPI arakyr7 = system.addPlanet("arakyr7", Astar, "ArakyrVII", "cryovolcanic", (float) (Math.random()*360f), 150f, 20240f, 60152f);
 
         system.addAsteroidBelt(Astar, 60, 11500f, 200f, 300f, 600f, Terrain.ASTEROID_BELT, null);
         system.addAsteroidBelt(Astar, 75, 11600f, 200f, 300f, 600f, Terrain.ASTEROID_BELT, null);
@@ -74,7 +74,7 @@ public class MPS_Arakyr {
         w_loc3.setCircularOrbitPointingDown(Astar, 180f, 2800f, 200f);
         SectorEntityToken gate = system.addCustomEntity("MPS_gate", "Ihan-rii", Entities.INACTIVE_GATE,
                 Factions.NEUTRAL);
-        gate.setCircularOrbit(arakyr3, 180f, 3650f, 365f);
+        gate.setCircularOrbit(arakyr3, 120f, 2400f, 365f);
 
         DebrisFieldTerrainPlugin.DebrisFieldParams params = new DebrisFieldTerrainPlugin.DebrisFieldParams( // 碎片(Debris)
                 280f, // 碎片场半径，不应超过1000，影响性能

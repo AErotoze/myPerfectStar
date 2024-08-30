@@ -1,6 +1,6 @@
-package MPS.scripts;
+package MPS.data.scripts;
 
-import MPS.scripts.world.MPS_WorldGen;
+import MPS.data.scripts.world.MPS_WorldGen;
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 

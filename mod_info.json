@@ -1,0 +1,12 @@
+{
+  "id": "myPerfectStar",
+  "name": "自制星系",
+  "version": "1.0",
+  "author": "AErotoze",
+  "description": "星海茫茫无际，还好我们有一个家。",
+  "gameVersion": "0.97a-RC11",
+  "jars": [
+    "jars/myPerfectStar.jar"
+  ],
+  "modPlugin": "MPS.data.scripts.MPS_ModPlugin"
+}

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="97GraphicsLib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../GraphicsLib/jars" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../GraphicsLib/jars" recursive="false" />
+  </library>
+</component>
